@@ -1,0 +1,27 @@
+{
+  "name": "planets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmills0203/Planets.git"
+  },
+  "author": "Theresa M.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmills0203/Planets/issues"
+  },
+  "homepage": "https://github.com/tmills0203/Planets#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8"
+  }
+}
