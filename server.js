@@ -9,8 +9,8 @@ const replaceTemplate = (temp, product) => {
   let output = temp.replace(/{%PLANET_NAME%}/g, product.planetName);
   output = output.replace(/{%IMAGE%}/g, product.image);
   output = output.replace(/{%MOON%}/g, product.moon);
-  output = output.replace(/{%FORMED%}/g, product.formed);
-  output = output.replace(/{%NUTRIENTS%}/g, product.nutrients);
+  output = output.replace(/{%PLANET_TYPE%}/g, product.planet_type);
+  output = output.replace(/{%RADIUS%}/g, product.radius);
   output = output.replace(/{%QUANTITY%}/g, product.quantity);
   output = output.replace(/{%DESCRIPTION%}/g, product.description);
   output = output.replace(/{%ID%}/g, product.id);
