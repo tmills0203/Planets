@@ -3,24 +3,9 @@ const path = require("path");
 const http = require("http");
 const PORT = 3000;
 
+const replaceTemplate = require("./modules/replaceTemplate");
+
 // SERVER
-const replaceTemplate = (temp, product) => {
-  //replace product name
-  let output = temp.replace(/{%PLANET_NAME%}/g, product.planetName);
-  output = output.replace(/{%IMAGE%}/g, product.image);
-  output = output.replace(/{%MOON%}/g, product.moon);
-  output = output.replace(/{%PLANET_TYPE%}/g, product.planet_type);
-  output = output.replace(/{%RADIUS%}/g, product.radius);
-  output = output.replace(/{%QUANTITY%}/g, product.quantity);
-  output = output.replace(/{%DESCRIPTION%}/g, product.description);
-  output = output.replace(/{%ID%}/g, product.id);
-
-  // organic
-  if (!product.organic)
-    output = output.replace(/{%NOT_ORGANIC%}/g, "not-organic");
-
-  return output;
-};
 
 const tempOverview = fs.readFileSync(
   path.join(__dirname, "template", "temp-overview.html"),
@@ -53,12 +38,12 @@ const server = http.createServer((req, res) => {
     const cardsHtml = dataObj
       .map((el) => replaceTemplate(tempCard, el))
       .join("");
-    const output = tempOverview.replace("{%PRODUCT_CARDS%}", cardsHtml);
+    const output = tempOverview.replace("{%PLANET_CARDS%}", cardsHtml);
 
     res.end(output);
 
     // PRODUCT PAGE
-  } else if (pathName === "/product") {
+  } else if (pathName === "/planet") {
     res.end("this is the product");
 
     // API

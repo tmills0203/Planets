@@ -67,7 +67,7 @@
         margin: 0 auto;
       }
 
-      .product {
+      .planet {
         width: 60rem;
         margin: 0 auto;
         margin-top: 9rem;
@@ -76,13 +76,13 @@
         position: relative;
       }
 
-      .product__hero {
+      .planet__hero {
         position: relative;
         height: 22rem;
         overflow: hidden;
       }
 
-      .product__hero::before {
+      .planet__hero::before {
         content: "";
         display: block;
         height: 100%;
@@ -95,59 +95,59 @@
         z-index: 100;
       }
 
-      .product__emoji {
+      .planet__emoji {
         font-size: 15rem;
         position: absolute;
       }
 
-      .product__emoji--1 {
+      .planet__emoji--1 {
         top: -4rem;
         left: -2rem;
         z-index: 10;
       }
 
-      .product__emoji--2 {
+      .planet__emoji--2 {
         top: -6rem;
         left: 9rem;
       }
 
-      .product__emoji--3 {
+      .planet__emoji--3 {
         top: -4rem;
         right: 15rem;
       }
 
-      .product__emoji--4 {
+      .planet__emoji--4 {
         top: -5rem;
         right: 2rem;
         z-index: 10;
       }
 
-      .product__emoji--5 {
+      .planet__emoji--5 {
         bottom: -9rem;
         left: 18rem;
       }
 
-      .product__emoji--6 {
+      .planet__emoji--6 {
         bottom: -8rem;
         left: 5rem;
       }
 
-      .product__emoji--7 {
+      .planet__emoji--7 {
         bottom: -12rem;
         right: 14rem;
       }
 
-      .product__emoji--8 {
+      .planet__emoji--8 {
         bottom: -8rem;
         right: -2rem;
       }
 
-      .product__emoji--9 {
+      .planet__emoji--9 {
         top: -7rem;
         left: 19rem;
       }
 
-      .product__organic {
+      /* .product__organic {
         position: absolute;
         top: -4rem;
         right: -4rem;
@@ -168,10 +168,10 @@
         text-transform: uppercase;
         font-size: 1.8rem;
         color: white;
-      }
+      } */
 
-      .product__back:link,
-      .product__back:visited {
+      .planet__back:link,
+      .planet__back:visited {
         position: absolute;
         top: 2rem;
         left: 2rem;
@@ -190,12 +190,12 @@
         align-items: center;
       }
 
-      .product__back:hover,
-      .product__back:active {
+      .planet__back:hover,
+      .planet__back:active {
         background-color: #79e17b;
       }
 
-      .product__name {
+      .planet__name {
         background: linear-gradient(to bottom, #9be15d, #00e3ae);
         padding: 1rem;
         font-family: "Megrim", sans-serif;
@@ -205,7 +205,7 @@
         word-spacing: 2px;
       }
 
-      .product__details {
+      .planet__details {
         background-color: #eee;
         padding: 4rem 6rem;
         font-size: 1.9rem;
@@ -214,14 +214,14 @@
         grid-gap: 1.5rem;
       }
 
-      .product__description {
+      .planet__description {
         padding: 5rem 6rem;
         font-size: 1.6rem;
         line-height: 1.8;
       }
 
-      .product__link:link,
-      .product__link:visited {
+      .planet__link:link,
+      .planet__link:visited {
         display: block;
         background-color: #79e17b;
         color: white;
@@ -239,13 +239,13 @@
         transition: all 0.3s;
       }
 
-      .product__link:hover,
-      .product__link:active {
+      .planet__link:hover,
+      .planet__link:active {
         background-color: #9be15d;
         transform: scale(1.1) skewX(-20deg);
       }
 
-      .product__link span {
+      .planet__link span {
         transform: skewX(20deg);
       }
 
@@ -259,9 +259,9 @@
         margin-left: 1rem;
       }
 
-      .not-organic {
+      /* .not-organic {
         display: none;
-      }
+      } */
     </style>
   </head>
 
@@ -269,36 +269,36 @@
     <div class="container">
       <h1>🌎 THE PLANETS 🪐</h1>
 
-      <figure class="product">
-        <div class="product__organic {%NOT_ORGANIC%}"><h5>Organic</h5></div>
-        <a href="#" class="product__back">
+      <figure class="planet">
+        <!-- <div class="product__organic {%NOT_ORGANIC%}"><h5>Organic</h5></div> -->
+        <a href="#" class="planet__back">
           <span class="emoji-left">👈</span>Back
         </a>
-        <div class="product__hero">
-          <span class="product__emoji product__emoji--1">{%IMAGE%}</span>
-          <span class="product__emoji product__emoji--2">{%IMAGE%}</span>
-          <span class="product__emoji product__emoji--3">{%IMAGE%}</span>
-          <span class="product__emoji product__emoji--4">{%IMAGE%}</span>
-          <span class="product__emoji product__emoji--5">{%IMAGE%}</span>
-          <span class="product__emoji product__emoji--6">{%IMAGE%}</span>
-          <span class="product__emoji product__emoji--7">{%IMAGE%}</span>
-          <span class="product__emoji product__emoji--8">{%IMAGE%}</span>
-          <span class="product__emoji product__emoji--9">{%IMAGE%}</span>
+        <div class="planet__hero">
+          <span class="planet__emoji planet__emoji--1">{%IMAGE%}</span>
+          <span class="planet__emoji planet__emoji--2">{%IMAGE%}</span>
+          <span class="planet__emoji planet__emoji--3">{%IMAGE%}</span>
+          <span class="planet__emoji planet__emoji--4">{%IMAGE%}</span>
+          <span class="planet__emoji planet__emoji--5">{%IMAGE%}</span>
+          <span class="planet__emoji planet__emoji--6">{%IMAGE%}</span>
+          <span class="planet__emoji planet__emoji--7">{%IMAGE%}</span>
+          <span class="planet__emoji planet__emoji--8">{%IMAGE%}</span>
+          <span class="planet__emoji planet__emoji--9">{%IMAGE%}</span>
         </div>
-        <h2 class="product__name">{%PRODUCT_NAME%}</h2>
-        <div class="product__details">
-          <p><span class="emoji-left">🌍</span> {%PRODUCT_NAME%}</p>
+        <h2 class="planet__name">{%PLANET_NAME%}</h2>
+        <div class="planet__details">
+          <p><span class="emoji-left">🌍</span> {%PLANET_NAME%}</p>
           <p><span class="emoji-left">❤️</span> from{%FROM%}</p>
           <p><span class="emoji-left">📦</span>{%QUANTITY%}</p>
           <p><span class="emoji-left">🏷</span>{%PRICE%}€</p>
         </div>
 
-        <a href="#" class="product__link">
+        <a href="#" class="planet__link">
           <span class="emoji-left">🛒</span>
           <span>Add to shopping card ({%PRICE%}€)</span>
         </a>
 
-        <p class="product__description">{%DESCRIPTION%}</p>
+        <p class="planet__description">{%DESCRIPTION%}</p>
       </figure>
     </div>
   </body>
