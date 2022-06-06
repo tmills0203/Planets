@@ -8,12 +8,13 @@
       href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="icon"
-      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/155/ear-of-maize_1f33d.png"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
     />
-
-    <title>{%PLANET_NAME%} {%IMAGE%} /// PLANETS</title>
+    <title>{%PLANET_NAME%}</title>
 
     <style>
       *,
@@ -32,20 +33,22 @@
       body {
         padding: 5rem 5rem 10rem;
         line-height: 1.7;
-        font-family: "Nunito Sans", sans-serif;
+        font-family: "Ubuntu", sans-serif;
         color: #555;
         min-height: 100vh;
-        background: linear-gradient(to bottom right, #9be15d, #00e3ae);
+        background-color: #21d4fd;
+        background-image: linear-gradient(24deg, #21d4fd 0%, #b721ff 100%);
       }
 
       h1 {
-        font-family: "Megrim", sans-serif;
+        font-family: "Ubuntu", sans-serif;
         font-size: 6rem;
         color: white;
         transform: skewY(-5deg);
         text-align: center;
         position: relative;
         word-spacing: 3px;
+        font-weight: 400;
       }
 
       h1::before {
@@ -56,7 +59,9 @@
         position: absolute;
         top: 105%;
         left: 50%;
-        background: linear-gradient(to bottom, #9be15d, #00e3ae);
+        background-color: #21d4fd;
+        background-image: linear-gradient(24deg, #21d4fd 0%, #b721ff 100%);
+
         opacity: 0.8;
         z-index: -1;
         transform: skewY(370deg) translate(-50%, -50%);
@@ -90,7 +95,9 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: linear-gradient(to left bottom, #9be15d, #00e3ae);
+        background-color: #21d4fd;
+        background-image: linear-gradient(24deg, #21d4fd 0%, #b721ff 100%);
+
         opacity: 0.5;
         z-index: 100;
       }
@@ -147,29 +154,6 @@
         left: 19rem;
       }
 
-      /* .product__organic {
-        position: absolute;
-        top: -4rem;
-        right: -4rem;
-        z-index: 1000;
-        height: 11rem;
-        width: 11rem;
-        background-image: linear-gradient(to bottom, #9be15d, #00e3ae);
-        border-radius: 50%;
-        transform: rotate(15deg);
-        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .product__organic h5 {
-        font-weight: 900;
-        text-transform: uppercase;
-        font-size: 1.8rem;
-        color: white;
-      } */
-
       .planet__back:link,
       .planet__back:visited {
         position: absolute;
@@ -196,13 +180,16 @@
       }
 
       .planet__name {
-        background: linear-gradient(to bottom, #9be15d, #00e3ae);
+        background-color: #21d4fd;
+        background-image: linear-gradient(24deg, #21d4fd 0%, #b721ff 100%);
+
         padding: 1rem;
-        font-family: "Megrim", sans-serif;
+        font-family: "Ubuntu", sans-serif;
         font-size: 4rem;
         color: white;
         text-align: center;
         word-spacing: 2px;
+        font-weight: 400;
       }
 
       .planet__details {
@@ -258,10 +245,6 @@
         font-size: 2rem;
         margin-left: 1rem;
       }
-
-      /* .not-organic {
-        display: none;
-      } */
     </style>
   </head>
 
@@ -271,32 +254,29 @@
 
       <figure class="planet">
         <!-- <div class="product__organic {%NOT_ORGANIC%}"><h5>Organic</h5></div> -->
-        <a href="#" class="planet__back">
+        <a href="/overview" class="planet__back">
           <span class="emoji-left">👈</span>Back
         </a>
         <div class="planet__hero">
-          <span class="planet__emoji planet__emoji--1">{%IMAGE%}</span>
-          <span class="planet__emoji planet__emoji--2">{%IMAGE%}</span>
-          <span class="planet__emoji planet__emoji--3">{%IMAGE%}</span>
-          <span class="planet__emoji planet__emoji--4">{%IMAGE%}</span>
-          <span class="planet__emoji planet__emoji--5">{%IMAGE%}</span>
-          <span class="planet__emoji planet__emoji--6">{%IMAGE%}</span>
-          <span class="planet__emoji planet__emoji--7">{%IMAGE%}</span>
-          <span class="planet__emoji planet__emoji--8">{%IMAGE%}</span>
-          <span class="planet__emoji planet__emoji--9">{%IMAGE%}</span>
+          <span class="planet__emoji planet__emoji--1">🚀</span>
+          <span class="planet__emoji planet__emoji--2">🌠</span>
+          <span class="planet__emoji planet__emoji--3">🚀</span>
+          <span class="planet__emoji planet__emoji--4">🌠</span>
+          <span class="planet__emoji planet__emoji--5">🚀</span>
+          <span class="planet__emoji planet__emoji--6">🌠</span>
+          <span class="planet__emoji planet__emoji--7">🚀</span>
+          <span class="planet__emoji planet__emoji--8">🌠</span>
+          <span class="planet__emoji planet__emoji--9">🚀</span>
         </div>
         <h2 class="planet__name">{%PLANET_NAME%}</h2>
         <div class="planet__details">
-          <p><span class="emoji-left">🌍</span> {%PLANET_NAME%}</p>
-          <p><span class="emoji-left">❤️</span> from{%FROM%}</p>
-          <p><span class="emoji-left">📦</span>{%QUANTITY%}</p>
-          <p><span class="emoji-left">🏷</span>{%PRICE%}€</p>
+          <p><span class="emoji-left">⭐</span> {%PLANET_NAME%}</p>
+          <p><span class="emoji-left">🪐</span>{%RING%} rings</p>
+          <p><span class="emoji-left">🌡</span>{%TEMP%}(°F)</p>
+          <p>
+            <span class="emoji-left">🌕</span>{%PLANET_NAME%} has {%MOON%} moon
+          </p>
         </div>
-
-        <a href="#" class="planet__link">
-          <span class="emoji-left">🛒</span>
-          <span>Add to shopping card ({%PRICE%}€)</span>
-        </a>
 
         <p class="planet__description">{%DESCRIPTION%}</p>
       </figure>

@@ -5,7 +5,8 @@ module.exports = (temp, planet) => {
   output = output.replace(/{%MOON%}/g, planet.moon);
   output = output.replace(/{%PLANET_TYPE%}/g, planet.planet_type);
   output = output.replace(/{%RADIUS%}/g, planet.radius);
-  output = output.replace(/{%QUANTITY%}/g, planet.quantity);
+  output = output.replace(/{%RING%}/g, planet.rings);
+  output = output.replace(/{%TEMP%}/g, planet.temp);
   output = output.replace(/{%DESCRIPTION%}/g, planet.description);
   output = output.replace(/{%ID%}/g, planet.id);
 

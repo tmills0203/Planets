@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const http = require("http");
+const { URL } = require("url");
 const PORT = 3000;
 
 const replaceTemplate = require("./modules/replaceTemplate");
@@ -28,10 +29,12 @@ const data = fs.readFileSync(
 const dataObj = JSON.parse(data);
 
 const server = http.createServer((req, res) => {
-  const pathName = req.url;
+  const { pathname, searchParams } = new URL(req.url, "http://localhost:3000");
+
+  const query = Object.fromEntries(searchParams);
 
   //OVERVIEW PAGE
-  if (pathName === "/" || pathName === "/overview") {
+  if (pathname === "/" || pathname === "/overview") {
     res.writeHead(200, { "Content-type": "text/html" });
 
     // loop thru data
@@ -43,11 +46,14 @@ const server = http.createServer((req, res) => {
     res.end(output);
 
     // PRODUCT PAGE
-  } else if (pathName === "/planet") {
-    res.end("this is the product");
+  } else if (pathname === "/planet") {
+    res.writeHead(200, { "Content-type": "text/html" });
+    const product = dataObj[query.id];
+    const output = replaceTemplate(tempProduct, product);
+    res.end(output);
 
     // API
-  } else if (pathName === "/api") {
+  } else if (pathname === "/api") {
     res.writeHead(200, { "Content-type": "application/json" });
     res.end(data);
 
